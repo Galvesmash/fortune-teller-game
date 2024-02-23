@@ -2,19 +2,21 @@
   <div
     class="home"
   >
-    <FortuneGame />
+    <FortuneTellerGame />
   </div>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import FortuneGame from '@/components/Fortune/FortuneGame/FortuneGame.vue';
+  // eslint-disable-next-line
+  //import FortuneTellerGame from "@/index";
+  import FortuneTellerGame from '@/components/Fortune/FortuneGame/FortuneGame.vue';
 
   export default defineComponent({
     name: 'HomeView',
 
     components: {
-      FortuneGame,
+      FortuneTellerGame,
     },
 
   });
