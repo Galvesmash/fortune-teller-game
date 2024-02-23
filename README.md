@@ -22,16 +22,24 @@ yarn add vue-fortune-teller-game
 
 ## Basic Usage
 ```
+//src/main.js
+import Vue from "vue";
+import FortuneTellerGame from 'v-fortune-teller-game'
+Vue.use(FortuneTellerGame);
+```
+or
+```
+//src/components/Component.vue
 <template>
-  <VueFortuneTellerGame />
+  <FortuneTellerGame />
 </template>
 
 <script>
-  import VueFortuneTellerGame from "vue-fortune-teller-game";
+  import FortuneTellerGame from "v-fortune-teller-game";
 
   export default {
     components: {
-      VueFortuneTellerGame
+      FortuneTellerGame
     }
   };
 </script>

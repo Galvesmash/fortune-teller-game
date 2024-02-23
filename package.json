@@ -11,10 +11,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name vue-fortune-teller-game ./src/index.js",
+    "build-webpack": "webpack --config config/webpack.config.js",
     "lint": "vue-cli-service lint"
   },
-  "main": "./dist/vue-fortune-teller-game.js",
   "files": [
     "dist/*",
     "src/*",
@@ -48,12 +47,20 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.3",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.10.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "file-loader": "^6.2.0",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
     "typescript": "^5.3.3",
+    "vue-loader": "^17.4.2",
     "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
   },
   "eslintConfig": {

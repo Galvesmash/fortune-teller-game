@@ -1,9 +1,9 @@
-import FortuneTellerGame from './components/Fortune/FortuneGame.vue';
+import FortuneTellerGame from '@/components/Fortune/FortuneGame.vue';
 
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component("vue-fortune-teller-game", FortuneTellerGame);
+  Vue.component("v-fortune-teller-game", FortuneTellerGame);
 }
 
 const plugin = {
