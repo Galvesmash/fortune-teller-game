@@ -1,16 +1,37 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
-  "description": "Fortune Teller Game standalone",
-  "author": "Galvesmash", 
+  "description": "Fortune Teller Game standalone package",
+  "author": {
+    "name": "Gabriel Galves Taliatti (Galvesmash)",
+    "url": "https://github.com/Galvesmash"
+  },
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name vue-fortune-teller-game ./src/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "./dist/vue-fortune-teller-game.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.ts",
+    "*.js"
+  ],
+  "keywords": [
+    "vue",
+    "vuex",
+    "vue3",
+    "fortune",
+    "teller"
+  ],
   "dependencies": {
+    "@vue/cli-service": "^5.0.8",
     "axios": "^1.6.7",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
@@ -26,7 +47,6 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",

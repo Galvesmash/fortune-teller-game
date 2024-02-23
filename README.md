@@ -1,9 +1,11 @@
-# fortune-teller-game
+# vue-fortune-teller-game
+
+## This is a WIP project!
 
 ## About
-Fortune Teller Game project, made with Vue 3 and magic.
-Standalone project to be included inside Fortune Machine.
-Created bt Gabriel Galves Taliatti and Camila de Oliveira Mônaco.
+Fortune Teller Game, made with Vue 3 and magic.
+Standalone project to be included inside my other project (Fortune Machine) or other stuff.
+Created by Gabriel Galves Taliatti and Camila de Oliveira Mônaco.
 
 ### APIs:
 - Fortunecookie by wh-iterabb-it.
@@ -11,23 +13,26 @@ Created bt Gabriel Galves Taliatti and Camila de Oliveira Mônaco.
 
 ## Project setup
 ```
-"npm install" or "yarn install"
+npm install --save vue-fortune-teller-game
+```
+or
+```
+yarn add vue-fortune-teller-game
 ```
 
-### Compiles and hot-reloads for development
+## Basic Usage
 ```
-"npm run serve" or "yarn serve"
-```
+<template>
+  <VueFortuneTellerGame />
+</template>
 
-### Compiles and minifies for production
-```
-"npm run build" or "yarn build"
-```
+<script>
+  import VueFortuneTellerGame from "vue-fortune-teller-game";
 
-### Lints and fixes files
+  export default {
+    components: {
+      VueFortuneTellerGame
+    }
+  };
+</script>
 ```
-"npm run lint" or "yarn lint"
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
