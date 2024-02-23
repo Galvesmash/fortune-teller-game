@@ -1,7 +1,10 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
+  "description": "Fortune Teller Game standalone",
+  "author": "Galvesmash", 
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

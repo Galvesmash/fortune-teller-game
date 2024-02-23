@@ -8,8 +8,6 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  // eslint-disable-next-line
-  //import FortuneTellerGame from "@/index";
   import FortuneTellerGame from '@/components/Fortune/FortuneGame/FortuneGame.vue';
 
   export default defineComponent({
