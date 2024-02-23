@@ -1,4 +1,4 @@
-import FortuneTellerGame from '@/components/Fortune/FortuneGame.vue';
+import FortuneTellerGame from "./components/Fortune/FortuneGame/FortuneGame.vue";
 
 function install(Vue) {
   if (install.installed) return;

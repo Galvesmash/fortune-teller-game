@@ -1,12 +1,20 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Fortune Machine</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav> -->
-  <router-view
-    class="prevent-select"
-  />
+  <FortuneGame />
 </template>
+
+<script lang="ts">
+  import { defineComponent } from 'vue';
+  import FortuneGame from '@/components/Fortune/FortuneGame/FortuneGame.vue';
+
+  export default defineComponent({
+    name: 'app',
+
+    components: {
+      FortuneGame,
+    },
+
+  });
+</script>
 
 <style lang="scss">
   #app {

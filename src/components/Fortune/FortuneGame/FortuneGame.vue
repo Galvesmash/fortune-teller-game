@@ -142,16 +142,18 @@
 </script>
 
 <style scoped lang="scss">
-  $text-color-light: #140C1C;
+  $monitor-on-color-dark: #140C1C;
   $text-color-dark: #DEEED6;
 
   .fortune-game {
-    max-height: calc(100% - 8em);
-    max-width: calc(100% - 16em);
+    background-color: $monitor-on-color-dark;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
     padding: 4em 8em;
+    width: 100%;
 
     .menu {
-      // color: $text-color-light;
       color: $text-color-dark;
       font-family: vcrosdmono;
       text-align: initial;
