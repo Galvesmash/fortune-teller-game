@@ -1,1 +1,0 @@
-declare module 'fortune-teller-game';

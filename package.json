@@ -1,6 +1,6 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
@@ -17,7 +17,7 @@
   },
   "main": "./dist/fortune-teller-game.js",
   "module": "./dist/fortune-teller-game.mjs",
-  "types": "./dist/fortune-teller-game.d.ts",
+  "types": "./dist/main.d.ts",
   "files": [
     "dist/*",
     "public/*",
@@ -35,41 +35,15 @@
     "@vue/cli-service": "^5.0.8",
     "axios": "^1.6.7",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "vue": "^3.4.19",
     "vue-axios": "^3.5.2",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
-    "@vue/eslint-config-typescript": "^9.1.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
     "typescript": "^5.3.3"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "@vue/typescript"
-    ],
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    },
-    "rules": {
-      "@typescript-eslint/no-explicit-any": "off"
-    }
   },
   "browserslist": [
     "> 1%",
