@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "declaration": true,
+    "outDir": "dist",
     "strict": true,
+    "noImplicitAny": true,
     "jsx": "preserve",
     "moduleResolution": "node",
     "allowJs": true,
@@ -36,6 +39,8 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/App.vue",
+    "src/main.ts"
   ]
 }

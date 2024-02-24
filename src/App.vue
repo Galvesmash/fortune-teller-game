@@ -1,16 +1,16 @@
 <template>
-  <FortuneGame />
+  <FortuneTellerGame />
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import FortuneGame from '@/components/Fortune/FortuneGame/FortuneGame.vue';
+  import FortuneTellerGame from './index';
 
   export default defineComponent({
     name: 'app',
 
     components: {
-      FortuneGame,
+      FortuneTellerGame,
     },
 
   });

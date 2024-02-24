@@ -3,7 +3,7 @@ import FortuneTellerGame from "./components/Fortune/FortuneGame/FortuneGame.vue"
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component("v-fortune-teller-game", FortuneTellerGame);
+  Vue.component("fortune-teller-game", FortuneTellerGame);
 }
 
 const plugin = {

@@ -1,6 +1,6 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.1.3",
+  "version": "0.1.10",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
@@ -11,24 +11,25 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name v-fortune-teller-game ./src/index.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-library": "vue-cli-service build --target lib --name fortune-teller-game ./src/index.js",
+    "publish-package": "npm run build-library && npm publish --access public"
   },
-  "main": "./dist/v-fortune-teller-game.js",
+  "main": "./dist/fortune-teller-game.js",
+  "module": "./dist/fortune-teller-game.mjs",
+  "types": "./dist/fortune-teller-game.d.ts",
   "files": [
     "dist/*",
-    "src/*",
     "public/*",
-    "*.json",
-    "*.ts",
-    "*.js"
+    "src/*"
   ],
   "keywords": [
-    "vue",
+    "Vue",
     "vuex",
     "vue3",
     "fortune",
-    "teller"
+    "teller",
+    "typescript"
   ],
   "dependencies": {
     "@vue/cli-service": "^5.0.8",
