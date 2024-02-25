@@ -60,18 +60,6 @@ exports.A = (sfc, props) => {
 /******/ 		};
 /******/ 	}();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	!function() {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
@@ -102,7 +90,21 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  FortuneTellerCard: function() { return /* reexport */ FortuneCard; },
+  FortuneTellerCardLoading: function() { return /* reexport */ LoadingFortuneCard; },
+  FortuneTellerGame: function() { return /* reexport */ FortuneGame; },
+  FortuneTellerModalTemplate: function() { return /* reexport */ ModalTemplate; },
   "default": function() { return /* binding */ entry_lib; }
+});
+
+// NAMESPACE OBJECT: ./src/index.js
+var src_namespaceObject = {};
+__webpack_require__.r(src_namespaceObject);
+__webpack_require__.d(src_namespaceObject, {
+  e6: function() { return FortuneCard; },
+  gf: function() { return LoadingFortuneCard; },
+  _w: function() { return FortuneGame; },
+  xs: function() { return ModalTemplate; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -124,9 +126,9 @@ if (typeof window !== 'undefined') {
 
 ;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/FortuneGame.vue?vue&type=template&id=b83eb81e&scoped=true&ts=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=template&id=2039bbe3&scoped=true&ts=true
 
-const _withScopeId = n => ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.pushScopeId)("data-v-b83eb81e"), n = n(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.popScopeId)(), n);
+const _withScopeId = n => ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.pushScopeId)("data-v-2039bbe3"), n = n(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.popScopeId)(), n);
 const _hoisted_1 = { class: "fortune-game" };
 const _hoisted_2 = { class: "menu" };
 const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/ (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("h1", { class: "title" }, " Jogo do Futuro ", -1));
@@ -165,7 +167,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ]));
 }
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneGame.vue?vue&type=template&id=b83eb81e&scoped=true&ts=true
+;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=template&id=2039bbe3&scoped=true&ts=true
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/devtools-api/lib/esm/env.js
 function getDevtoolsGlobalHook() {
@@ -1767,7 +1769,7 @@ var crystal_ball_namespaceObject = __webpack_require__.p + "img/crystal-ball.b76
 var hand_left_bottom_namespaceObject = __webpack_require__.p + "img/hand-left-bottom.95af0ea5.png";
 ;// CONCATENATED MODULE: ./src/assets/images/fortune-teller-loading/hand-right-bottom.png
 var hand_right_bottom_namespaceObject = __webpack_require__.p + "img/hand-right-bottom.0dee7094.png";
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue?vue&type=template&id=10d26299&scoped=true&ts=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/LoadingFortuneCard.vue?vue&type=template&id=08a0890f&scoped=true&ts=true
 
 
 
@@ -1775,34 +1777,34 @@ var hand_right_bottom_namespaceObject = __webpack_require__.p + "img/hand-right-
 
 
 
-const LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_withScopeId = n => (_pushScopeId("data-v-10d26299"), n = n(), _popScopeId(), n);
-const LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_hoisted_1 = { class: "loading-fortune-card" };
-const LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_hoisted_2 = /*#__PURE__*/ (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createStaticVNode)("<img alt=\"Fortune teller hand left top image\" class=\"image hand-left-top\" src=\"" + hand_left_top_namespaceObject + "\" data-v-10d26299><img alt=\"Fortune teller hand right top image\" class=\"image hand-right-top\" src=\"" + hand_right_top_namespaceObject + "\" data-v-10d26299><img alt=\"Fortune teller black hole image\" class=\"image black-hole\" src=\"" + black_hole_namespaceObject + "\" data-v-10d26299><img alt=\"Fortune teller crystal ball image\" class=\"image crystal-ball\" src=\"" + crystal_ball_namespaceObject + "\" data-v-10d26299><img alt=\"Fortune teller hand left bottom image\" class=\"image hand-left-bottom\" src=\"" + hand_left_bottom_namespaceObject + "\" data-v-10d26299><img alt=\"Fortune teller hand right bottom image\" class=\"image hand-right-bottom\" src=\"" + hand_right_bottom_namespaceObject + "\" data-v-10d26299>", 6);
+const LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_withScopeId = n => (_pushScopeId("data-v-08a0890f"), n = n(), _popScopeId(), n);
+const LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_hoisted_1 = { class: "loading-fortune-card" };
+const LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_hoisted_2 = /*#__PURE__*/ (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createStaticVNode)("<img alt=\"Fortune teller hand left top image\" class=\"image hand-left-top\" src=\"" + hand_left_top_namespaceObject + "\" data-v-08a0890f><img alt=\"Fortune teller hand right top image\" class=\"image hand-right-top\" src=\"" + hand_right_top_namespaceObject + "\" data-v-08a0890f><img alt=\"Fortune teller black hole image\" class=\"image black-hole\" src=\"" + black_hole_namespaceObject + "\" data-v-08a0890f><img alt=\"Fortune teller crystal ball image\" class=\"image crystal-ball\" src=\"" + crystal_ball_namespaceObject + "\" data-v-08a0890f><img alt=\"Fortune teller hand left bottom image\" class=\"image hand-left-bottom\" src=\"" + hand_left_bottom_namespaceObject + "\" data-v-08a0890f><img alt=\"Fortune teller hand right bottom image\" class=\"image hand-right-bottom\" src=\"" + hand_right_bottom_namespaceObject + "\" data-v-08a0890f>", 6);
 const _hoisted_8 = [
-    LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_hoisted_2
+    LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_hoisted_2
 ];
-function LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_render(_ctx, _cache, $props, $setup, $data, $options) {
-    return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_hoisted_1, _hoisted_8));
+function LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_render(_ctx, _cache, $props, $setup, $data, $options) {
+    return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_hoisted_1, _hoisted_8));
 }
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue?vue&type=template&id=10d26299&scoped=true&ts=true
+;// CONCATENATED MODULE: ./src/components/LoadingFortuneCard.vue?vue&type=template&id=08a0890f&scoped=true&ts=true
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/LoadingFortuneCard.vue?vue&type=script&lang=ts
 
 /* harmony default export */ var LoadingFortuneCardvue_type_script_lang_ts = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
     name: 'LoadingFortuneCard',
 }));
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./src/components/LoadingFortuneCard.vue?vue&type=script&lang=ts
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue?vue&type=style&index=0&id=10d26299&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/LoadingFortuneCard.vue?vue&type=style&index=0&id=08a0890f&scoped=true&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue?vue&type=style&index=0&id=10d26299&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./src/components/LoadingFortuneCard.vue?vue&type=style&index=0&id=08a0890f&scoped=true&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(262);
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/LoadingFortuneCard.vue
+;// CONCATENATED MODULE: ./src/components/LoadingFortuneCard.vue
 
 
 
@@ -1810,34 +1812,34 @@ var exportHelper = __webpack_require__(262);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(LoadingFortuneCardvue_type_script_lang_ts, [['render',LoadingFortuneCardvue_type_template_id_10d26299_scoped_true_ts_true_render],['__scopeId',"data-v-10d26299"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(LoadingFortuneCardvue_type_script_lang_ts, [['render',LoadingFortuneCardvue_type_template_id_08a0890f_scoped_true_ts_true_render],['__scopeId',"data-v-08a0890f"]])
 
 /* harmony default export */ var LoadingFortuneCard = (__exports__);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/FortuneCard.vue?vue&type=template&id=041c6df0&scoped=true&ts=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneCard.vue?vue&type=template&id=82d4a634&scoped=true&ts=true
 
-const FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_withScopeId = n => (_pushScopeId("data-v-041c6df0"), n = n(), _popScopeId(), n);
-const FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_hoisted_1 = { class: "fortune-card" };
-const FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_hoisted_2 = {
+const FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_withScopeId = n => (_pushScopeId("data-v-82d4a634"), n = n(), _popScopeId(), n);
+const FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_hoisted_1 = { class: "fortune-card" };
+const FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_hoisted_2 = {
     key: 0,
     class: "fortune"
 };
-const FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_hoisted_3 = {
+const FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_hoisted_3 = {
     key: 1,
     class: "fortune error"
 };
-function FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_render(_ctx, _cache, $props, $setup, $data, $options) {
-    return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_hoisted_1, [
+function FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_render(_ctx, _cache, $props, $setup, $data, $options) {
+    return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_hoisted_1, [
         (!_ctx.fortuneError && (_ctx.fortuneTranslated || _ctx.fortune))
-            ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("p", FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_hoisted_2, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(_ctx.fortuneTranslated || _ctx.fortune), 1))
+            ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("p", FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_hoisted_2, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(_ctx.fortuneTranslated || _ctx.fortune), 1))
             : (_ctx.fortuneError)
-                ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("p", FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_hoisted_3, " Aconteceu um problema com a máquina. Tente novamente mais tarde! "))
+                ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("p", FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_hoisted_3, " Aconteceu um problema com a máquina. Tente novamente mais tarde! "))
                 : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)
     ]));
 }
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneCard.vue?vue&type=template&id=041c6df0&scoped=true&ts=true
+;// CONCATENATED MODULE: ./src/components/FortuneCard.vue?vue&type=template&id=82d4a634&scoped=true&ts=true
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/FortuneCard.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneCard.vue?vue&type=script&lang=ts
 
 
 /* harmony default export */ var FortuneCardvue_type_script_lang_ts = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
@@ -1851,14 +1853,14 @@ function FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_render(_ct
     },
 }));
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneCard.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./src/components/FortuneCard.vue?vue&type=script&lang=ts
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/FortuneCard.vue?vue&type=style&index=0&id=041c6df0&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneCard.vue?vue&type=style&index=0&id=82d4a634&scoped=true&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneCard.vue?vue&type=style&index=0&id=041c6df0&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./src/components/FortuneCard.vue?vue&type=style&index=0&id=82d4a634&scoped=true&lang=scss
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneCard.vue
+;// CONCATENATED MODULE: ./src/components/FortuneCard.vue
 
 
 
@@ -1866,15 +1868,15 @@ function FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_render(_ct
 ;
 
 
-const FortuneCard_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FortuneCardvue_type_script_lang_ts, [['render',FortuneCardvue_type_template_id_041c6df0_scoped_true_ts_true_render],['__scopeId',"data-v-041c6df0"]])
+const FortuneCard_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FortuneCardvue_type_script_lang_ts, [['render',FortuneCardvue_type_template_id_82d4a634_scoped_true_ts_true_render],['__scopeId',"data-v-82d4a634"]])
 
 /* harmony default export */ var FortuneCard = (FortuneCard_exports_);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/General/ModalTemplate.vue?vue&type=template&id=084d1846&scoped=true&ts=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ModalTemplate.vue?vue&type=template&id=1fd93b5f&scoped=true&ts=true
 
-const ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_withScopeId = n => (_pushScopeId("data-v-084d1846"), n = n(), _popScopeId(), n);
-const ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_hoisted_1 = { class: "modal-wrapper" };
-const ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_hoisted_2 = { class: "modal-container" };
-function ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_render(_ctx, _cache, $props, $setup, $data, $options) {
+const ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_withScopeId = n => (_pushScopeId("data-v-1fd93b5f"), n = n(), _popScopeId(), n);
+const ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_hoisted_1 = { class: "modal-wrapper" };
+const ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_hoisted_2 = { class: "modal-container" };
+function ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_render(_ctx, _cache, $props, $setup, $data, $options) {
     return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Transition, { name: "modal" }, {
         default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withCtx)(() => [
             (_ctx.show)
@@ -1883,8 +1885,8 @@ function ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_render(_
                     class: "modal-mask",
                     onClick: _cache[0] || (_cache[0] = ($event) => (_ctx.$emit('handleClose')))
                 }, [
-                    (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("div", ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_hoisted_1, [
-                        (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("div", ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_hoisted_2, [
+                    (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("div", ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_hoisted_1, [
+                        (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("div", ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_hoisted_2, [
                             (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderSlot)(_ctx.$slots, "default", {}, undefined, true)
                         ])
                     ])
@@ -1895,9 +1897,9 @@ function ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_render(_
     }));
 }
 
-;// CONCATENATED MODULE: ./src/components/General/ModalTemplate.vue?vue&type=template&id=084d1846&scoped=true&ts=true
+;// CONCATENATED MODULE: ./src/components/ModalTemplate.vue?vue&type=template&id=1fd93b5f&scoped=true&ts=true
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/General/ModalTemplate.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ModalTemplate.vue?vue&type=script&lang=ts
 
 /* harmony default export */ var ModalTemplatevue_type_script_lang_ts = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
     name: 'ModalTemplate',
@@ -1911,14 +1913,14 @@ function ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_render(_
     },
 }));
 
-;// CONCATENATED MODULE: ./src/components/General/ModalTemplate.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./src/components/ModalTemplate.vue?vue&type=script&lang=ts
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/General/ModalTemplate.vue?vue&type=style&index=0&id=084d1846&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ModalTemplate.vue?vue&type=style&index=0&id=1fd93b5f&scoped=true&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/General/ModalTemplate.vue?vue&type=style&index=0&id=084d1846&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./src/components/ModalTemplate.vue?vue&type=style&index=0&id=1fd93b5f&scoped=true&lang=scss
 
-;// CONCATENATED MODULE: ./src/components/General/ModalTemplate.vue
+;// CONCATENATED MODULE: ./src/components/ModalTemplate.vue
 
 
 
@@ -1926,10 +1928,10 @@ function ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_render(_
 ;
 
 
-const ModalTemplate_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(ModalTemplatevue_type_script_lang_ts, [['render',ModalTemplatevue_type_template_id_084d1846_scoped_true_ts_true_render],['__scopeId',"data-v-084d1846"]])
+const ModalTemplate_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(ModalTemplatevue_type_script_lang_ts, [['render',ModalTemplatevue_type_template_id_1fd93b5f_scoped_true_ts_true_render],['__scopeId',"data-v-1fd93b5f"]])
 
 /* harmony default export */ var ModalTemplate = (ModalTemplate_exports_);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/FortuneGame.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=script&lang=ts
 
 
 
@@ -2016,14 +2018,14 @@ const ModalTemplate_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Moda
     },
 }));
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneGame.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=script&lang=ts
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Fortune/FortuneGame/FortuneGame.vue?vue&type=style&index=0&id=b83eb81e&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=style&index=0&id=2039bbe3&scoped=true&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneGame.vue?vue&type=style&index=0&id=b83eb81e&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=style&index=0&id=2039bbe3&scoped=true&lang=scss
 
-;// CONCATENATED MODULE: ./src/components/Fortune/FortuneGame/FortuneGame.vue
+;// CONCATENATED MODULE: ./src/components/FortuneGame.vue
 
 
 
@@ -2031,39 +2033,45 @@ const ModalTemplate_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Moda
 ;
 
 
-const FortuneGame_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FortuneGamevue_type_script_lang_ts, [['render',render],['__scopeId',"data-v-b83eb81e"]])
+const FortuneGame_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FortuneGamevue_type_script_lang_ts, [['render',render],['__scopeId',"data-v-2039bbe3"]])
 
 /* harmony default export */ var FortuneGame = (FortuneGame_exports_);
 ;// CONCATENATED MODULE: ./src/index.js
+// import FortuneTellerGame from "./components/FortuneGame.vue";
+
+// function install(Vue) {
+//   if (install.installed) return;
+//   install.installed = true;
+//   Vue.component("fortune-teller-game", FortuneTellerGame);
+// }
+
+// const plugin = {
+//   install
+// };
+
+// let GlobalVue = null;
+// if (typeof window !== "undefined") {
+//   GlobalVue = window.Vue;
+// } else if (typeof global !== "undefined") {
+//   GlobalVue = global.vue;
+// }
+// if (GlobalVue) {
+//   GlobalVue.use(plugin);
+// }
+
+// FortuneTellerGame.install = install;
+
+// module.exports = FortuneTellerGame;
+// export default FortuneTellerGame;
 
 
-function install(Vue) {
-  if (install.installed) return;
-  install.installed = true;
-  Vue.component("fortune-teller-game", FortuneGame);
-}
 
-const src_plugin = {
-  install
-};
 
-let GlobalVue = null;
-if (typeof window !== "undefined") {
-  GlobalVue = window.Vue;
-} else if (typeof __webpack_require__.g !== "undefined") {
-  GlobalVue = __webpack_require__.g.vue;
-}
-if (GlobalVue) {
-  GlobalVue.use(src_plugin);
-}
 
-FortuneGame.install = install;
-
-/* harmony default export */ var src_0 = (FortuneGame);
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = (src_0);
+/* harmony default export */ var entry_lib = (src_namespaceObject["default"]);
 
 
 }();

@@ -1,6 +1,6 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
@@ -19,7 +19,8 @@
   "module": "src/index.js",
   "files": [
     "dist/*",
-    "public/*"
+    "public/*",
+    "src/*"
   ],
   "keywords": [
     "Vue",
