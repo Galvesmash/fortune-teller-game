@@ -45,7 +45,7 @@
   import { mapActions, mapGetters, mapMutations } from 'vuex';
   import LoadingFortuneCard from './LoadingFortuneCard.vue';
   import FortuneCard from './FortuneCard.vue';
-  import ModalTemplate from '@/components/General/ModalTemplate.vue';
+  import ModalTemplate from './ModalTemplate.vue';
 
   export default defineComponent({
     name: 'FortuneGame',

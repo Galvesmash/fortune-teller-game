@@ -4,7 +4,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import FortuneTellerGame from './index';
+  import { FortuneTellerGame } from './index';
 
   export default defineComponent({
     name: 'app',
@@ -12,7 +12,6 @@
     components: {
       FortuneTellerGame,
     },
-
   });
 </script>
 
