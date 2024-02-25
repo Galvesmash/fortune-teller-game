@@ -60,6 +60,18 @@ exports.A = (sfc, props) => {
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	!function() {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
@@ -90,21 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  FortuneTellerCard: function() { return /* reexport */ FortuneCard; },
-  FortuneTellerCardLoading: function() { return /* reexport */ LoadingFortuneCard; },
-  FortuneTellerGame: function() { return /* reexport */ FortuneGame; },
-  FortuneTellerModalTemplate: function() { return /* reexport */ ModalTemplate; },
   "default": function() { return /* binding */ entry_lib; }
-});
-
-// NAMESPACE OBJECT: ./src/index.js
-var src_namespaceObject = {};
-__webpack_require__.r(src_namespaceObject);
-__webpack_require__.d(src_namespaceObject, {
-  e6: function() { return FortuneCard; },
-  gf: function() { return LoadingFortuneCard; },
-  _w: function() { return FortuneGame; },
-  xs: function() { return ModalTemplate; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -2037,41 +2035,40 @@ const FortuneGame_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Fortun
 
 /* harmony default export */ var FortuneGame = (FortuneGame_exports_);
 ;// CONCATENATED MODULE: ./src/index.js
-// import FortuneTellerGame from "./components/FortuneGame.vue";
-
-// function install(Vue) {
-//   if (install.installed) return;
-//   install.installed = true;
-//   Vue.component("fortune-teller-game", FortuneTellerGame);
-// }
-
-// const plugin = {
-//   install
-// };
-
-// let GlobalVue = null;
-// if (typeof window !== "undefined") {
-//   GlobalVue = window.Vue;
-// } else if (typeof global !== "undefined") {
-//   GlobalVue = global.vue;
-// }
-// if (GlobalVue) {
-//   GlobalVue.use(plugin);
-// }
-
-// FortuneTellerGame.install = install;
-
-// module.exports = FortuneTellerGame;
-// export default FortuneTellerGame;
 
 
+function install(Vue) {
+  if (install.installed) return;
+  install.installed = true;
+  Vue.component("fortune-teller-game", FortuneGame);
+}
 
+const src_plugin = {
+  install
+};
 
+let GlobalVue = null;
+if (typeof window !== "undefined") {
+  GlobalVue = window.Vue;
+} else if (typeof __webpack_require__.g !== "undefined") {
+  GlobalVue = __webpack_require__.g.vue;
+}
+if (GlobalVue) {
+  GlobalVue.use(src_plugin);
+}
 
+FortuneGame.install = install;
+
+/* harmony default export */ var src_0 = (FortuneGame);
+
+// export { default as FortuneTellerGame } from './components/FortuneGame.vue';
+// export { default as FortuneTellerCard } from './components/FortuneCard.vue';
+// export { default as FortuneTellerCardLoading } from './components/LoadingFortuneCard.vue';
+// export { default as FortuneTellerModalTemplate } from './components/ModalTemplate.vue';
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = (src_namespaceObject["default"]);
+/* harmony default export */ var entry_lib = (src_0);
 
 
 }();
