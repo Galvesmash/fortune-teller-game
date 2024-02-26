@@ -39,8 +39,6 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-    "src/App.vue",
-    "src/main.ts"
+    "node_modules"
   ]
 }

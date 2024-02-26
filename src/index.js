@@ -23,8 +23,3 @@ if (GlobalVue) {
 FortuneTellerGame.install = install;
 
 export default FortuneTellerGame;
-
-// export { default as FortuneTellerGame } from './components/FortuneGame.vue';
-// export { default as FortuneTellerCard } from './components/FortuneCard.vue';
-// export { default as FortuneTellerCardLoading } from './components/LoadingFortuneCard.vue';
-// export { default as FortuneTellerModalTemplate } from './components/ModalTemplate.vue';

@@ -2,6 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.15]
+## [0.2.0]
 
-- Still trying to fix npm package
+- Fixed npm package.

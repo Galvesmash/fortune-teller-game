@@ -24,7 +24,7 @@ yarn add vue-fortune-teller-game
 ```
 //src/main.js
 import Vue from "vue";
-import FortuneTellerGame from 'v-fortune-teller-game'
+import FortuneTellerGame from 'fortune-teller-game';
 Vue.use(FortuneTellerGame);
 ```
 or
@@ -35,7 +35,7 @@ or
 </template>
 
 <script>
-  import FortuneTellerGame from "v-fortune-teller-game";
+  import FortuneTellerGame from "fortune-teller-game";
 
   export default {
     components: {
