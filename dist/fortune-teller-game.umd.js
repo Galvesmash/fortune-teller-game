@@ -2077,11 +2077,6 @@ if (GlobalVue) {
 FortuneGame.install = install;
 
 /* harmony default export */ var src_0 = (FortuneGame);
-
-// export { default as FortuneTellerGame } from './components/FortuneGame.vue';
-// export { default as FortuneTellerCard } from './components/FortuneCard.vue';
-// export { default as FortuneTellerCardLoading } from './components/LoadingFortuneCard.vue';
-// export { default as FortuneTellerModalTemplate } from './components/ModalTemplate.vue';
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
