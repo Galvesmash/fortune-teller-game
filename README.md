@@ -13,11 +13,11 @@ Created by Gabriel Galves Taliatti and Camila de Oliveira Mônaco.
 
 ## Project setup
 ```
-npm install --save vue-fortune-teller-game
+npm install --save fortune-teller-game
 ```
 or
 ```
-yarn add vue-fortune-teller-game
+yarn add fortune-teller-game
 ```
 
 ## Basic Usage
