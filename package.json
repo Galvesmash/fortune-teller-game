@@ -15,7 +15,7 @@
     "build-library": "vue-cli-service build --target lib --name fortune-teller-game ./src/index.js",
     "publish-package": "npm run build-library && npm publish --access public"
   },
-  "homepage": "https://github.com/owner/project#readme",
+  "homepage": "https://github.com/Galvesmash/fortune-teller-game#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/Galvesmash/fortune-teller-game.git"
