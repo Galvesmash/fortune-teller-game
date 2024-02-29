@@ -7,6 +7,8 @@ const state = () => ({
   fortune_error: false,
   fortune_options: [],
   fortune_translated: '',
+  rapidApiUrl: 'fortune-cookie4.p.rapidapi.com',
+  rapidApiKey: '',
 });
 
 export default {

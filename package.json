@@ -1,6 +1,6 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
@@ -41,6 +41,7 @@
     "core-js": "^3.8.3",
     "vue": "^3.4.19",
     "vue-axios": "^3.5.2",
+    "vue-i18n": "^9.9.1",
     "vuex": "^4.1.0"
   },
   "devDependencies": {

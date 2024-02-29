@@ -13,8 +13,8 @@
       v-else-if="fortuneError"
       class="fortune error"
     >
-      Aconteceu um problema com a máquina.
-      Tente novamente mais tarde!
+      {{ $t('general.fortune_machine_error') }}
+      {{ $t('general.try_again_later') }}
     </p>
   </div>
 </template>

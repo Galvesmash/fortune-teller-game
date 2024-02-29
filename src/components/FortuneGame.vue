@@ -8,22 +8,23 @@
       <h1
         class="title"
       >
-        Jogo do Futuro
+        {{ $t('general.fortune_game') }}
       </h1>
 
       <h3
         class="subtitle"
       >
-        Escolha um tópico para prever o futuro.
+        {{ $t('general.choose_topic') }}
       </h3>
 
       <a
         v-for="(option, index) in fortuneOptions"
+        :disable="option.active"
         :key="index"
         @click="handleFortune(option.value)"
         class="option"
       >
-        {{ option.translate }}
+        {{ $t(`general.${option.value}`) }}
       </a>
     </div>
       
@@ -46,6 +47,7 @@
   import LoadingFortuneCard from './LoadingFortuneCard.vue';
   import FortuneCard from './FortuneCard.vue';
   import ModalTemplate from './ModalTemplate.vue';
+  import {useI18n} from 'vue-i18n';
 
   export default defineComponent({
     name: 'FortuneGame',
@@ -56,6 +58,14 @@
       ModalTemplate,
     },
 
+    props: {
+      locale: String,
+      rapidApiKey: {
+        type: String,
+        required: true
+      }
+    },
+
     data() {
       return {
         loadingFortune: false,
@@ -64,17 +74,32 @@
     },
 
     created() {
+      this.setLocale(this.locale || 'pt-br');
+
+      if (this.rapidApiKey) {
+        this.setRapidApiKeyFortune(this.rapidApiKey);
+        this.setRapidApiKeyGeneral(this.rapidApiKey);
+      }
+
       this.setFortuneOptions([
         {
-          translate: 'Amor',
+          id: 1,
+          active: true,
+          value: 'random',
+        },
+        {
+          id: 2,
+          active: false,
           value: 'love',
         },
         {
-          translate: 'Amigos',
+          id: 3,
+          active: false,
           value: 'friends',
         },
         {
-          translate: 'Dinheiro',
+          id: 4,
+          active: false,
           value: 'money',
         },
       ]);
@@ -93,6 +118,12 @@
         'setFortuneError',
         'setFortuneOptions',
         'setFortuneTranslated',
+        'setRapidApiKeyFortune',
+      ]),
+
+      ...mapMutations('fortune_teller/general', [
+        'setLocale',
+        'setRapidApiKeyGeneral',
       ]),
 
       handleFortune(theme = null) {
@@ -113,7 +144,7 @@
       translateText() {
         const payload = {
           text: this.fortune,
-          target: 'pt-br'
+          target: this.getLocale
         };
 
         this.translate(payload).then((response) => {
@@ -137,6 +168,10 @@
         fortune: 'getFortune',
         fortuneOptions: 'getFortuneOptions',
       }),
+
+      ...mapGetters('fortune_teller/general', [
+        'getLocale',
+      ]),
     },
   });
 </script>
@@ -147,11 +182,11 @@
 
   .fortune-game {
     background-color: $monitor-on-color-dark;
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
+    height: calc(100% - 8em);
+    max-height: calc(100% - 8em);
+    max-width: calc(100% - 16em);
     padding: 4em 8em;
-    width: 100%;
+    width: calc(100% - 16em);
 
     .menu {
       color: $text-color-dark;

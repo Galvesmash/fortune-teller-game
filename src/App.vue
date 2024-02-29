@@ -1,5 +1,9 @@
 <template>
-  <FortuneTellerGame />
+  <FortuneTellerGame
+    :default-locale="defaultLocale"
+    :fallback-locale="fallbackLocale"
+    :rapid-api-key="rapidApiKey"
+  />
 </template>
 
 <script lang="ts">
@@ -12,6 +16,20 @@
     components: {
       FortuneTellerGame,
     },
+
+    data() {
+      return {
+        defaultLocale: '',
+        fallbackLocale: '',
+        rapidApiKey: ''
+      }
+    },
+
+    created() {
+      this.defaultLocale = process.env.VUE_APP_DEFAULT_LOCALE;
+      this.fallbackLocale = process.env.VUE_APP_FALLBACK_LOCALE;
+      this.rapidApiKey = process.env.VUE_APP_FORTUNE_TELLER_GAME_RAPID_API_KEY;
+    }
   });
 </script>
 
