@@ -8,8 +8,8 @@ Standalone project to be included inside my other project (Fortune Machine) or o
 Created by Gabriel Galves Taliatti and Camila de Oliveira Mônaco.
 
 ### APIs:
-- Fortunecookie by wh-iterabb-it.
-- Meowfacts by wh-iterabb-it.
+- Fortune Cookie by wh-iterabb-it. (https://rapidapi.com/wh-iterabb-it-wh-iterabb-it-default/api/fortune-cookie4/)
+- OpenTranslator by falcondsp. (https://rapidapi.com/falcondsp/api/opentranslator)
 
 ## Project setup
 ```

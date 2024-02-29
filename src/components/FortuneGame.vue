@@ -8,22 +8,23 @@
       <h1
         class="title"
       >
-        Jogo do Futuro
+        {{ $t('general.fortune_game') }}
       </h1>
 
       <h3
         class="subtitle"
       >
-        Escolha um tópico para prever o futuro.
+        {{ $t('general.choose_topic') }}
       </h3>
 
       <a
         v-for="(option, index) in fortuneOptions"
+        :disabled="option.active"
         :key="index"
         @click="handleFortune(option.value)"
         class="option"
       >
-        {{ option.translate }}
+        {{ $t(`general.${option.value}`) }}
       </a>
     </div>
       
@@ -46,6 +47,7 @@
   import LoadingFortuneCard from './LoadingFortuneCard.vue';
   import FortuneCard from './FortuneCard.vue';
   import ModalTemplate from './ModalTemplate.vue';
+  import {useI18n} from 'vue-i18n';
 
   export default defineComponent({
     name: 'FortuneGame',
@@ -64,17 +66,26 @@
     },
 
     created() {
+      debugger
       this.setFortuneOptions([
         {
-          translate: 'Amor',
+          id: 1,
+          active: true,
+          value: 'random',
+        },
+        {
+          id: 2,
+          active: false,
           value: 'love',
         },
         {
-          translate: 'Amigos',
+          id: 3,
+          active: false,
           value: 'friends',
         },
         {
-          translate: 'Dinheiro',
+          id: 4,
+          active: false,
           value: 'money',
         },
       ]);
