@@ -14,7 +14,9 @@ export default {
           'X-RapidAPI-Key': state.rapidApiKey,
         }
       }).then((response) => {
-        resolve(commit('setFortune', response.data.text.split("'")[1].trim()));
+        let answer = response.data.text.split("'")[1].trim();
+        console.log(answer);
+        resolve(commit('setFortune', answer));
       }).catch((error) => {
         commit('setFortuneError');
         reject(error);
