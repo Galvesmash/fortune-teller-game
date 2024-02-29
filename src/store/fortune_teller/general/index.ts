@@ -3,7 +3,9 @@ import actions from './actions';
 import mutations from './mutations';
 
 const state = () => ({
-  // 
+  locale: '',
+  rapidApiUrl: 'opentranslator.p.rapidapi.com',
+  rapidApiKey: '',
 });
 
 export default {

@@ -19,7 +19,7 @@
 
       <a
         v-for="(option, index) in fortuneOptions"
-        :disabled="option.active"
+        :disable="option.active"
         :key="index"
         @click="handleFortune(option.value)"
         class="option"
@@ -58,6 +58,14 @@
       ModalTemplate,
     },
 
+    props: {
+      locale: String,
+      rapidApiKey: {
+        type: String,
+        required: true
+      }
+    },
+
     data() {
       return {
         loadingFortune: false,
@@ -66,7 +74,13 @@
     },
 
     created() {
-      debugger
+      this.setLocale(this.locale || 'pt-br');
+
+      if (this.rapidApiKey) {
+        this.setRapidApiKeyFortune(this.rapidApiKey);
+        this.setRapidApiKeyGeneral(this.rapidApiKey);
+      }
+
       this.setFortuneOptions([
         {
           id: 1,
@@ -104,6 +118,12 @@
         'setFortuneError',
         'setFortuneOptions',
         'setFortuneTranslated',
+        'setRapidApiKeyFortune',
+      ]),
+
+      ...mapMutations('fortune_teller/general', [
+        'setLocale',
+        'setRapidApiKeyGeneral',
       ]),
 
       handleFortune(theme = null) {
@@ -124,7 +144,7 @@
       translateText() {
         const payload = {
           text: this.fortune,
-          target: 'pt-br'
+          target: this.getLocale
         };
 
         this.translate(payload).then((response) => {
@@ -148,6 +168,10 @@
         fortune: 'getFortune',
         fortuneOptions: 'getFortuneOptions',
       }),
+
+      ...mapGetters('fortune_teller/general', [
+        'getLocale',
+      ]),
     },
   });
 </script>

@@ -5,13 +5,13 @@ export default {
   /*
    * GET
    */
-  getFortune({ commit }: any) {
+  getFortune({ commit, state }: any) {
     return new Promise((resolve, reject) => {
-      axios.get(consts.ENDPOINTS.GET_FORTUNE, {
+      axios.get(`https://${state.rapidApiUrl}/slack`, {
         headers: {
           'Content-Type': 'application/json',
-          'X-RapidAPI-Host': process.env.VUE_APP_RAPID_API_FORTUNE_HOST,
-          'X-RapidAPI-Key': process.env.VUE_APP_RAPID_API_KEY,
+          'X-RapidAPI-Host': state.rapidApiUrl,
+          'X-RapidAPI-Key': state.rapidApiKey,
         }
       }).then((response) => {
         resolve(commit('setFortune', response.data.text.split("'")[1].trim()));

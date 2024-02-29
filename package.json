@@ -1,6 +1,6 @@
 {
   "name": "fortune-teller-game",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {

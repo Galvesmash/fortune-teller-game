@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.1]
+## [0.3.0]
 
-- Added repository and homepage to package.json.
+- Translations added with i18n.
 
 ## [0.2.0]
 

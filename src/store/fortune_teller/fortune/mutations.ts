@@ -24,4 +24,8 @@ export default {
     state.fortune_error = false;
     state.fortune_translated = payload;
   },
+
+  setRapidApiKeyFortune(state: any, payload: any) {
+    state.rapidApiKey = payload || '';
+  },
 };

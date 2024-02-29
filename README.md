@@ -28,16 +28,12 @@ yarn add fortune-teller-game
 
 ## Basic Usage
 ```
-//src/main.js
-import Vue from "vue";
-import FortuneTellerGame from 'fortune-teller-game';
-Vue.use(FortuneTellerGame);
-```
-or
-```
 //src/components/Component.vue
 <template>
-  <FortuneTellerGame />
+  <FortuneTellerGame
+    :default-locale="defaultLocale"
+    :fallback-locale="fallbackLocale"
+    :rapid-api-key="rapidApiKey"/>
 </template>
 
 <script>

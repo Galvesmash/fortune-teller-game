@@ -7,13 +7,13 @@ export default {
    * @param text: string
    * @param target: string
    */
-  translate({ commit }: any, payload = null) {
+  translate({ commit, state }: any, payload = null) {
     return new Promise((resolve, reject) => {
-      axios.post(consts.ENDPOINTS.TRANSLATE, payload, {
+      axios.post(`https://${state.rapidApiUrl}/translate`, payload, {
         headers: {
           'Content-Type': 'application/json',
-          'X-RapidAPI-Host': process.env.VUE_APP_RAPID_API_OPENTRANSLATOR_HOST,
-          'X-RapidAPI-Key': process.env.VUE_APP_RAPID_API_KEY,
+          'X-RapidAPI-Host': state.rapidApiUrl,
+          'X-RapidAPI-Key': state.rapidApiKey,
         }
       }).then((response) => {
         commit(resolve(response.data[0].result.text));
