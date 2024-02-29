@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1]
+
+- Added script to registry store and minor updates.
+
 ## [0.3.0]
 
 - Added translations (i18n).
