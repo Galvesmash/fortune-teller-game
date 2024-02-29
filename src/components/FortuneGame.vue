@@ -158,11 +158,11 @@
 
   .fortune-game {
     background-color: $monitor-on-color-dark;
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
+    height: calc(100% - 8em);
+    max-height: calc(100% - 8em);
+    max-width: calc(100% - 16em);
     padding: 4em 8em;
-    width: 100%;
+    width: calc(100% - 16em);
 
     .menu {
       color: $text-color-dark;
