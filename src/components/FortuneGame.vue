@@ -48,6 +48,8 @@
   import FortuneCard from './FortuneCard.vue';
   import ModalTemplate from './ModalTemplate.vue';
   import {useI18n} from 'vue-i18n';
+  import { registerOrCreateStore } from '@/static/js/helpers.js'
+  import FortuneTellerStore from '@/store/fortune_teller'
 
   export default defineComponent({
     name: 'FortuneGame',
@@ -71,6 +73,10 @@
         loadingFortune: false,
         showFortuneAnswerModal: false,
       }
+    },
+
+    beforeCreate() {
+      registerOrCreateStore(this, 'fortune_teller', FortuneTellerStore);
     },
 
     created() {
