@@ -133,9 +133,9 @@ if (typeof window !== 'undefined') {
 
 ;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=template&id=10fc04a0&scoped=true&ts=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=template&id=3ed5c6a8&scoped=true&ts=true
 
-const _withScopeId = n => (_pushScopeId("data-v-10fc04a0"), n = n(), _popScopeId(), n);
+const _withScopeId = n => (_pushScopeId("data-v-3ed5c6a8"), n = n(), _popScopeId(), n);
 const _hoisted_1 = { class: "fortune-game" };
 const _hoisted_2 = { class: "menu" };
 const _hoisted_3 = { class: "title" };
@@ -175,7 +175,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ]));
 }
 
-;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=template&id=10fc04a0&scoped=true&ts=true
+;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=template&id=3ed5c6a8&scoped=true&ts=true
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/devtools-api/lib/esm/env.js
 function getDevtoolsGlobalHook() {
@@ -5751,10 +5751,10 @@ const general_state = () => ({
 
 ;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=script&lang=ts
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=style&index=0&id=10fc04a0&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/FortuneGame.vue?vue&type=style&index=0&id=3ed5c6a8&scoped=true&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=style&index=0&id=10fc04a0&scoped=true&lang=scss
+;// CONCATENATED MODULE: ./src/components/FortuneGame.vue?vue&type=style&index=0&id=3ed5c6a8&scoped=true&lang=scss
 
 ;// CONCATENATED MODULE: ./src/components/FortuneGame.vue
 
@@ -5764,7 +5764,7 @@ const general_state = () => ({
 ;
 
 
-const FortuneGame_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FortuneGamevue_type_script_lang_ts, [['render',render],['__scopeId',"data-v-10fc04a0"]])
+const FortuneGame_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(FortuneGamevue_type_script_lang_ts, [['render',render],['__scopeId',"data-v-3ed5c6a8"]])
 
 /* harmony default export */ var FortuneGame = (FortuneGame_exports_);
 ;// CONCATENATED MODULE: ./src/index.js
@@ -5773,7 +5773,7 @@ const FortuneGame_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Fortun
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component("fortune-teller-game", FortuneGame);
+  Vue.component('fortune-teller-game', FortuneGame);
 }
 
 const src_plugin = {
@@ -5781,9 +5781,9 @@ const src_plugin = {
 };
 
 let GlobalVue = null;
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
-} else if (typeof __webpack_require__.g !== "undefined") {
+} else if (typeof __webpack_require__.g !== 'undefined') {
   GlobalVue = __webpack_require__.g.vue;
 }
 if (GlobalVue) {
