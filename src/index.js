@@ -1,9 +1,9 @@
-import FortuneTellerGame from "./components/FortuneGame.vue";
+import FortuneTellerGame from './components/FortuneGame.vue';
 
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component("fortune-teller-game", FortuneTellerGame);
+  Vue.component('fortune-teller-game', FortuneTellerGame);
 }
 
 const plugin = {
@@ -11,9 +11,9 @@ const plugin = {
 };
 
 let GlobalVue = null;
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
-} else if (typeof global !== "undefined") {
+} else if (typeof global !== 'undefined') {
   GlobalVue = global.vue;
 }
 if (GlobalVue) {
