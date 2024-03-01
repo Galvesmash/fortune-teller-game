@@ -1,4 +1,4 @@
-# vue-fortune-teller-game
+# fortune-teller-game
 
 ## This is a WIP project!
 
@@ -28,11 +28,10 @@ yarn add fortune-teller-game
 
 ## Basic Usage
 ```
-//src/components/Component.vue
+//src/components/YourComponent.vue
 <template>
   <FortuneTellerGame
-    :default-locale="defaultLocale"
-    :fallback-locale="fallbackLocale"
+    :locale="defaultLocale"
     :rapid-api-key="rapidApiKey"/>
 </template>
 
@@ -42,7 +41,14 @@ yarn add fortune-teller-game
   export default {
     components: {
       FortuneTellerGame
-    }
+    },
+
+    data() {
+      return {
+        defaultLocale: 'pt-br',
+        rapidApiKey: 'your-rapid-api-key', // Required
+      }
+    },
   };
 </script>
 ```
