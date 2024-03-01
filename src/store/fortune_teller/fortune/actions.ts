@@ -15,7 +15,6 @@ export default {
         }
       }).then((response) => {
         let answer = response.data.text.split("'")[1].trim();
-        console.log(answer);
         resolve(commit('setFortune', answer));
       }).catch((error) => {
         commit('setFortuneError');

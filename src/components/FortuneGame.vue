@@ -19,7 +19,8 @@
 
       <a
         v-for="(option, index) in fortuneOptions"
-        :disable="option.active"
+        :class="{ 'disabled': !option.active }"
+        :disabled="!option.active"
         :key="index"
         @click="handleFortune(option.value)"
         class="option"
@@ -61,7 +62,9 @@
     },
 
     props: {
-      locale: String,
+      locale: {
+        type: String
+      },
       rapidApiKey: {
         type: String,
         required: true
@@ -80,7 +83,8 @@
     },
 
     created() {
-      this.setLocale(this.locale || 'pt-br');
+      this.$i18n.locale = this.locale || this.getDefaultLocale;
+      this.setLocale(this.locale || this.getDefaultLocale);
 
       if (this.rapidApiKey) {
         this.setRapidApiKeyFortune(this.rapidApiKey);
@@ -120,12 +124,13 @@
         'translate',
       ]),
 
-      ...mapMutations('fortune_teller/fortune', [
-        'setFortuneError',
-        'setFortuneOptions',
-        'setFortuneTranslated',
-        'setRapidApiKeyFortune',
-      ]),
+      ...mapMutations('fortune_teller/fortune', {
+        resetFortune: 'reset',
+        setFortuneError: 'setFortuneError',
+        setFortuneOptions: 'setFortuneOptions',
+        setFortuneTranslated: 'setFortuneTranslated',
+        setRapidApiKeyFortune: 'setRapidApiKeyFortune',
+      }),
 
       ...mapMutations('fortune_teller/general', [
         'setLocale',
@@ -135,13 +140,24 @@
       handleFortune(theme = null) {
         if (!theme || this.loadingFortune) return;
 
+        // Reset Fortune in store
+        this.resetFortune();
+
         this.loadingFortune = true;
 
         /* TODO: Change later to validate theme and get correct fortune */
         this.getFortune().then(() => {
-          this.translateText();
+          if (this.getLocale != this.getDefaultLocale) {
+            // Translate text if "locale" isn't english (Default locale)
+            this.translateText();
+          } else {
+            // Show card modal with Fortune
+            this.showFortuneAnswerModal = true;
+            this.loadingFortune = false;
+          }
         }).catch((error) => {
           console.error(error);
+          // Show card modal with Error Message
           this.showFortuneAnswerModal = true;
           this.loadingFortune = false;
         });
@@ -159,6 +175,7 @@
           console.error(error);
           this.setFortuneTranslated('');
         }).finally(() => {
+          // Show card modal with Fortune or Error Message
           this.showFortuneAnswerModal = true;
           this.loadingFortune = false;
         });
@@ -176,6 +193,8 @@
       }),
 
       ...mapGetters('fortune_teller/general', [
+        'getAvailableLocales',
+        'getDefaultLocale',
         'getLocale',
       ]),
     },
@@ -192,6 +211,7 @@
     max-height: calc(100% - 8em);
     max-width: calc(100% - 16em);
     padding: 4em 8em;
+    position: relative;
     width: calc(100% - 16em);
 
     .menu {
@@ -200,21 +220,22 @@
       text-align: initial;
       text-transform: uppercase;
 
-      .title {
-      }
-
-      .subtitle {
-      }
-
       .option {
         cursor: pointer;
         display: flex;
+
+        &.disabled {
+          cursor: initial;
+          opacity: .5;
+          pointer-events: none;
+        }
 
         &:hover {
           font-weight: bold;
 
           &::before {
             content: "> ";
+            white-space: pre-wrap;
           }
         }
       }

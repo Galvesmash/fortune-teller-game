@@ -39,14 +39,16 @@
 </script>
 
 <style scoped lang="scss">
+  $monitor-on-color-dark: #140C1C;
+
   .modal-mask {
-    position: fixed;
+    position: absolute;
     z-index: 9998;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #140C1C;
     display: table;
     transition: opacity 0.3s ease;
   }
