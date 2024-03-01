@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.2] 
+## [0.3.2]
 
 - Changes in store import inside component that was causing an error in npm package.
 
