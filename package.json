@@ -4,8 +4,8 @@
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
-    "name": "Gabriel Galves Taliatti (Galvesmash)",
-    "url": "https://github.com/Galvesmash"
+    "name": "Gabriel Galves Taliatti",
+    "url": "https://galvesmash.com"
   },
   "license": "MIT",
   "scripts": {
@@ -28,27 +28,27 @@
     "src/*"
   ],
   "keywords": [
+    "javascript",
+    "typescript",
+    "frontend",
     "Vue",
-    "vuex",
     "vue3",
+    "pinia",
     "fortune",
-    "teller",
-    "typescript"
+    "teller"
   ],
   "dependencies": {
     "@vue/cli-service": "^5.0.8",
-    "axios": "^1.6.7",
     "core-js": "^3.8.3",
-    "vue": "^3.4.21",
-    "vue-axios": "^3.5.2",
-    "vue-i18n": "^9.9.1",
-    "vuex": "^4.1.0"
+    "pinia": "^2.2.4",
+    "vue": "^3.4.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-typescript": "~5.0.0",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vue-cli-plugin-pinia": "~0.2.4"
   },
   "browserslist": [
     "> 1%",

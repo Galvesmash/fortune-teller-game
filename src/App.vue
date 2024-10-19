@@ -1,33 +1,11 @@
 <template>
-  <FortuneTellerGame
-    :locale="defaultLocale"
-    :rapid-api-key="rapidApiKey"
-  />
+  <FortuneTellerGame :locale="defaultLocale" />
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import FortuneTellerGame from './index';
+<script setup lang="ts">
+  import { ref } from 'vue';
 
-  export default defineComponent({
-    name: 'app',
-
-    components: {
-      FortuneTellerGame,
-    },
-
-    data() {
-      return {
-        defaultLocale: '',
-        rapidApiKey: ''
-      }
-    },
-
-    created() {
-      this.defaultLocale = process.env.VUE_APP_DEFAULT_LOCALE;
-      this.rapidApiKey = process.env.VUE_APP_FORTUNE_TELLER_GAME_RAPID_API_KEY;
-    }
-  });
+  const defaultLocale = ref(process.env.VUE_APP_DEFAULT_LOCALE)
 </script>
 
 <style lang="scss">
