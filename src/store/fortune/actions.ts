@@ -1,13 +1,15 @@
 import { useFortuneStore } from '@/store'
+import type { FortuneOptions } from '@/types'
 
 export default {
-  reset() {
+  resetFortune() {
     const store = useFortuneStore()
 
     store.fortune = ''
     store.fortuneError = false
     store.fortuneTranslated = ''
   },
+
   setFortune(payload: string) {
     const store = useFortuneStore()
 
@@ -15,11 +17,17 @@ export default {
     store.fortuneError = false
   },
 
-  setFortuneOptions(payload?: string[]) {
+  setFortuneOptions(payload?: FortuneOptions[]) {
     const store = useFortuneStore()
 
     store.fortuneOptions = payload || []
   },
+
+  // setFortuneRandomOption(payload: string) {
+  //   const store = useFortuneStore()
+
+  //   store.fortuneOptions = payload || []
+  // },
 
   setFortuneError() {
     const store = useFortuneStore()

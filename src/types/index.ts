@@ -1,7 +1,13 @@
+export interface FortuneOptions {
+  id: number
+  active: boolean
+  value: string
+}
+
 export interface FortuneStore {
   fortune: string
   fortuneError: boolean
-  fortuneOptions: string[]
+  fortuneOptions: FortuneOptions[]
   fortuneTranslated: string
 }
 

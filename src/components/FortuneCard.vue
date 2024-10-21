@@ -1,39 +1,22 @@
 <template>
-  <div
-    class="fortune-card"
-  >
-    <p
-      v-if="!fortuneError && (fortuneTranslated || fortune)"
-      class="fortune"
-    >
+  <div class="fortune-card">
+    <p v-if="!fortuneError && (fortuneTranslated || fortune)" class="fortune">
       {{ fortuneTranslated || fortune }}
     </p>
 
-    <p
-      v-else-if="fortuneError"
-      class="fortune error"
-    >
+    <p v-else-if="fortuneError" class="fortune error">
       {{ $t('general.fortune_machine_error') }}
       {{ $t('general.try_again_later') }}
     </p>
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import { mapGetters } from 'vuex';
+<script setup lang="ts">
+  import { storeToRefs } from 'pinia'
+  import { useFortuneStore } from '@/store'
 
-  export default defineComponent({
-    name: 'FortuneCard',
-
-    computed: {
-      ...mapGetters('fortune_teller/fortune', {
-        fortune: 'getFortune',
-        fortuneError: 'getFortuneError',
-        fortuneTranslated: 'getFortuneTranslated',
-      }),
-    },
-  });
+  const fortuneStore = useFortuneStore()
+  const { fortune, fortuneError, fortuneTranslated } = storeToRefs(fortuneStore)
 </script>
 
 <style scoped lang="scss">

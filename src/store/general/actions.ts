@@ -1,10 +1,10 @@
 import { useGeneralStore } from '@/store'
 
 export default {
-  reset() {
+  resetGeneral() {
     const store = useGeneralStore()
 
-    store.locale = ''
+    store.locale = 'en'
   },
 
   setLocale(payload: string) {

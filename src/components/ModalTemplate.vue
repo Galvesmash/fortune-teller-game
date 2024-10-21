@@ -1,18 +1,8 @@
 <template>
-  <transition
-    name="modal"
-  >
-    <div
-      v-if="show"
-      class="modal-mask"
-      @click="$emit('handleClose')"
-    >
-      <div
-        class="modal-wrapper"
-      >
-        <div
-          class="modal-container"
-        >
+  <transition name="modal">
+    <div v-if="show" class="modal-mask" @click="emit('handle-close')">
+      <div class="modal-wrapper">
+        <div class="modal-container">
           <slot />
         </div>
       </div>
@@ -20,22 +10,12 @@
   </transition>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-
-  export default defineComponent({
-    name: 'ModalTemplate',
-
-    props: {
-      handleClose: Function,
-    },
-
-    data() {
-      return {
-        show: true,
-      }
-    },
-  });
+<script setup lang="ts">
+  import { ref } from 'vue'
+  
+  const emit = defineEmits(['handle-close'])
+  
+  const show = ref(true)
 </script>
 
 <style scoped lang="scss">

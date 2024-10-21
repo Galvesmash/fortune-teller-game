@@ -8,7 +8,7 @@ const state = (): GeneralStore => ({
     'pt-br'
   ],
   defaultLocale: 'en',
-  locale: '',
+  locale: 'en',
   packageVersion: process.env.VUE_APP_VERSION || '0',
 })
 

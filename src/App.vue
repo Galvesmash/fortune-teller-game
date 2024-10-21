@@ -3,7 +3,9 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue';
+  import { defineAsyncComponent, ref } from 'vue'
+
+  const FortuneTellerGame = defineAsyncComponent(() => import('./index'))
 
   const defaultLocale = ref(process.env.VUE_APP_DEFAULT_LOCALE)
 </script>

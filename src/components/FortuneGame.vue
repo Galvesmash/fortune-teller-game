@@ -1,20 +1,12 @@
 <template>
-  <div
-    class="fortune-game"
-  >
-    <div
-      class="menu"
-    >
-      <h1
-        class="title"
-      >
-        {{ $t('general.fortune_game') }}
+  <div class="fortune-game">
+    <div class="menu">
+      <h1 class="title">
+        {{ t('general.fortune_game') }}
       </h1>
 
-      <h3
-        class="subtitle"
-      >
-        {{ $t('general.choose_topic') }}
+      <h3 class="subtitle">
+        {{ t('general.choose_topic') }}
       </h3>
 
       <a
@@ -25,7 +17,7 @@
         @click="handleFortune(option.value)"
         class="option"
       >
-        {{ $t(`general.${option.value}`) }}
+        {{ t(`general.${option.value}`) }}
       </a>
     </div>
       
@@ -42,163 +34,83 @@
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import { mapActions, mapGetters, mapMutations } from 'vuex';
-  import LoadingFortuneCard from './LoadingFortuneCard.vue';
-  import FortuneCard from './FortuneCard.vue';
-  import ModalTemplate from './ModalTemplate.vue';
-  import {useI18n} from 'vue-i18n';
-  import { registerOrCreateStore } from '../static/js/helpers.js';
-  import FortuneTellerStore from '../store/fortune_teller';
+<script setup lang="ts">
+  import { defineAsyncComponent, ref } from 'vue'
+  import { useI18n } from 'vue-i18n'
+  import { storeToRefs } from 'pinia'
+  import { useGeneralStore, useFortuneStore } from '@/store'
 
-  export default defineComponent({
-    name: 'FortuneGame',
+  interface Props {
+    locale?: string
+  }
 
-    components: {
-      LoadingFortuneCard,
-      FortuneCard,
-      ModalTemplate,
+  const LoadingFortuneCard = defineAsyncComponent(() => import('./LoadingFortuneCard'))
+  const FortuneCard = defineAsyncComponent(() => import('./FortuneCard'))
+  const ModalTemplate = defineAsyncComponent(() => import('./ModalTemplate'))
+
+  const props = withDefaults(defineProps<Props>(), {
+    locale: 'en'
+  })
+
+  const { t, locale } = useI18n()
+
+  const fortuneStore = useFortuneStore()
+  const generalStore = useGeneralStore()
+
+  const { defaultLocale } = storeToRefs(generalStore)
+  const { fortune, fortuneOptions, getFortuneRandomOption } = storeToRefs(fortuneStore)
+
+  const resetFortune = fortuneStore.resetFortune
+  const setFortuneOptions = fortuneStore.setFortuneOptions
+  // const setFortuneRandomOption = fortuneStore.setFortuneRandomOption
+  const setLocale = generalStore.setLocale
+
+  const loadingFortune = ref(false)
+  const showFortuneAnswerModal = ref(false)
+
+  function handleFortune(theme: string | null = null) {
+    if (!theme || loadingFortune.value) return
+
+    resetFortune()
+
+    loadingFortune.value = true
+
+    // setFortuneRandomOption(fortune)
+    setTimeout(() => {
+      showFortuneAnswerModal.value = true
+      loadingFortune.value = false
+    }, 3000)
+  }
+
+  function closeCard() {
+    showFortuneAnswerModal.value = false
+  }
+
+  locale.value = props.locale || defaultLocale.value
+  setLocale(locale.value)
+
+  setFortuneOptions([
+    {
+      id: 1,
+      active: true,
+      value: 'random'
     },
-
-    props: {
-      locale: {
-        type: String
-      },
-      rapidApiKey: {
-        type: String,
-        required: true
-      }
+    {
+      id: 2,
+      active: false,
+      value: 'love'
     },
-
-    data() {
-      return {
-        loadingFortune: false,
-        showFortuneAnswerModal: false,
-      }
+    {
+      id: 3,
+      active: false,
+      value: 'friends'
     },
-
-    beforeCreate() {
-      registerOrCreateStore(this, 'fortune_teller', FortuneTellerStore);
-    },
-
-    created() {
-      this.$i18n.locale = this.locale || this.getDefaultLocale;
-      this.setLocale(this.locale || this.getDefaultLocale);
-
-      if (this.rapidApiKey) {
-        this.setRapidApiKeyFortune(this.rapidApiKey);
-        this.setRapidApiKeyGeneral(this.rapidApiKey);
-      }
-
-      this.setFortuneOptions([
-        {
-          id: 1,
-          active: true,
-          value: 'random',
-        },
-        {
-          id: 2,
-          active: false,
-          value: 'love',
-        },
-        {
-          id: 3,
-          active: false,
-          value: 'friends',
-        },
-        {
-          id: 4,
-          active: false,
-          value: 'money',
-        },
-      ]);
-    },
-
-    methods: {
-      ...mapActions('fortune_teller/fortune', [
-        'getFortune',
-      ]),
-
-      ...mapActions('fortune_teller/general', [
-        'translate',
-      ]),
-
-      ...mapMutations('fortune_teller/fortune', {
-        resetFortune: 'reset',
-        setFortuneError: 'setFortuneError',
-        setFortuneOptions: 'setFortuneOptions',
-        setFortuneTranslated: 'setFortuneTranslated',
-        setRapidApiKeyFortune: 'setRapidApiKeyFortune',
-      }),
-
-      ...mapMutations('fortune_teller/general', [
-        'setLocale',
-        'setRapidApiKeyGeneral',
-      ]),
-
-      handleFortune(theme = null) {
-        if (!theme || this.loadingFortune) return;
-
-        // Reset Fortune in store
-        this.resetFortune();
-
-        this.loadingFortune = true;
-
-        /* TODO: Change later to validate theme and get correct fortune */
-        this.getFortune().then(() => {
-          if (this.getLocale != this.getDefaultLocale) {
-            // Translate text if "locale" isn't english (Default locale)
-            this.translateText();
-          } else {
-            // Show card modal with Fortune
-            this.showFortuneAnswerModal = true;
-            this.loadingFortune = false;
-          }
-        }).catch((error) => {
-          console.error(error);
-          // Show card modal with Error Message
-          this.showFortuneAnswerModal = true;
-          this.loadingFortune = false;
-        });
-      },
-
-      translateText() {
-        const payload = {
-          text: this.fortune,
-          target: this.getLocale
-        };
-
-        this.translate(payload).then((response) => {
-          this.setFortuneTranslated(response);
-        }).catch((error) => {
-          console.error(error);
-          this.setFortuneTranslated('');
-        }).finally(() => {
-          // Show card modal with Fortune or Error Message
-          this.showFortuneAnswerModal = true;
-          this.loadingFortune = false;
-        });
-      },
-
-      closeCard() {
-        this.showFortuneAnswerModal = false;
-      },
-    },
-
-    computed: {
-      ...mapGetters('fortune_teller/fortune', {
-        fortune: 'getFortune',
-        fortuneOptions: 'getFortuneOptions',
-      }),
-
-      ...mapGetters('fortune_teller/general', [
-        'getAvailableLocales',
-        'getDefaultLocale',
-        'getLocale',
-      ]),
-    },
-  });
+    {
+      id: 4,
+      active: false,
+      value: 'money'
+    }
+  ])
 </script>
 
 <style scoped lang="scss">
