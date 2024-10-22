@@ -1,10 +1,6 @@
 <template>
-  <div
-    class="loading-fortune-card"
-  >
-    <div
-      class="content"
-    >
+  <div class="loading-fortune-card">
+    <div class="content">
       <img
         alt="Fortune teller hand left top image"
         class="image hand-left-top"
@@ -43,14 +39,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-  import { defineComponent } from 'vue';
-
-  export default defineComponent({
-    name: 'LoadingFortuneCard',
-  });
-</script>
 
 <style scoped lang="scss">
   $background-light: #F7F7F7;

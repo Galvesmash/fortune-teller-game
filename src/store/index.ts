@@ -1,20 +1,6 @@
-import fortune_teller from './fortune_teller';
-import { createStore } from 'vuex';
+import { defineStore } from 'pinia'
+import fortune from './fortune'
+import general from './general'
 
-export default createStore({
-  state: {
-    // 
-  },
-  getters: {
-    // 
-  },
-  mutations: {
-    // 
-  },
-  actions: {
-    // 
-  },
-  modules: {
-    fortune_teller,
-  }
-});
+export const useFortuneStore = defineStore('fortune', fortune)
+export const useGeneralStore = defineStore('general', general)
