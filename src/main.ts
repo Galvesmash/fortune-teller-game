@@ -1,13 +1,12 @@
 import * as Vue from 'vue';
 import App from './App.vue';
-import store from './store';
-import axios from 'axios';
 import i18n from './i18n';
-import VueAxios from 'vue-axios';
 import './assets/sass/style.scss';
+import { createPinia } from 'pinia'
+
+const pinia = createPinia()
 
 Vue.createApp(App)
-  .use(store)
+  .use(pinia)
   .use(i18n)
-  .use(VueAxios, axios)
   .mount('#app');
