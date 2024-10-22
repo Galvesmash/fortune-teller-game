@@ -23,12 +23,6 @@ export default {
     store.fortuneOptions = payload || []
   },
 
-  // setFortuneRandomOption(payload: string) {
-  //   const store = useFortuneStore()
-
-  //   store.fortuneOptions = payload || []
-  // },
-
   setFortuneError() {
     const store = useFortuneStore()
 

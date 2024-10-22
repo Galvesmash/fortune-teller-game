@@ -1,7 +1,8 @@
 export interface FortuneOptions {
   id: number
   active: boolean
-  value: string
+  title: string
+  value: string | null
 }
 
 export interface FortuneStore {
