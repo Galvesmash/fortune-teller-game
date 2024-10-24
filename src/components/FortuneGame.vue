@@ -44,7 +44,7 @@
     locale?: string
   }
 
-  const fortunesList = require('fortunes-list')
+  const fortunesList = require('@galvesmash/fortunes-list')
 
   const LoadingFortuneCard = defineAsyncComponent(() => import('./LoadingFortuneCard'))
   const FortuneCard = defineAsyncComponent(() => import('./FortuneCard'))
