@@ -1,5 +1,5 @@
 "use strict";
-((typeof self !== 'undefined' ? self : this)["webpackChunkfortune_teller_game"] = (typeof self !== 'undefined' ? self : this)["webpackChunkfortune_teller_game"] || []).push([[752],{
+((typeof self !== 'undefined' ? self : this)["webpackChunk_galvesmash_fortune_teller_game"] = (typeof self !== 'undefined' ? self : this)["webpackChunk_galvesmash_fortune_teller_game"] || []).push([[752],{
 
 /***/ 752:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
