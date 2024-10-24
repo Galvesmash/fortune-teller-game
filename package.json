@@ -1,6 +1,6 @@
 {
-  "name": "fortune-teller-game",
-  "version": "0.4.0",
+  "name": "@galvesmash/fortune-teller-game",
+  "version": "0.5.0",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
@@ -27,6 +27,9 @@
     "public/*",
     "src/*"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "javascript",
     "typescript",
@@ -38,9 +41,9 @@
     "teller"
   ],
   "dependencies": {
+    "@galvesmash/fortunes-list": "^0.3.0",
     "@vue/cli-service": "^5.0.8",
     "core-js": "^3.8.3",
-    "fortunes-list": "^0.2.1",
     "pinia": "^2.2.4",
     "vue": "^3.4.21",
     "vue-i18n": "^10.0.4"
