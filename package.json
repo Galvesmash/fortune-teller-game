@@ -1,6 +1,6 @@
 {
   "name": "@galvesmash/fortune-teller-game",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": false,
   "description": "Fortune Teller Game standalone package",
   "author": {
@@ -12,7 +12,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-library": "vue-cli-service build --target lib --name fortune-teller-game ./src/index.ts",
+    "build-library": "vue-cli-service build --target lib --name @galvesmash/fortune-teller-game ./src/index.ts",
     "publish-package": "npm run build-library && npm publish --access public"
   },
   "homepage": "https://github.com/Galvesmash/fortune-teller-game#readme",

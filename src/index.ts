@@ -4,7 +4,7 @@ import FortuneTellerGame from './components/FortuneGame.vue'
 function install(app: App): void {
   if ((install as any).installed) return
   (install as any).installed = true
-  app.component('fortune-teller-game', FortuneTellerGame)
+  app.component('@galvesmash/fortune-teller-game', FortuneTellerGame)
 }
 
 const plugin: Plugin = {
